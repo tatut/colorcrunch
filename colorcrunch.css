@@ -1,0 +1,282 @@
+
+	/* Style for arced text */
+	.arced {
+		display: inline-block;
+		font-size: 150%;
+		color: magenta;
+	}
+	.subtitle {
+		position: absolute;
+		left: 125px;
+		top: 150px;
+		font-size: 75%;
+		color: darkmagenta;
+	}
+	/* The container element the game renders itself onto */
+     #colorcrunch {
+      	width: 320px;
+      	height: 480px; 
+	     margin: 0; padding: 0;
+     }
+
+     #preload {
+       display: none;
+     }
+
+      body {
+        margin: 0; padding: 0; background: #000;
+      }
+      
+	/* Styles for the game main menu */
+	a.menu {
+	  display: inline-block;
+	  border-radius: 60px;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	  padding-top: 5px;
+	  padding-bottom: 5px;
+	  font-size: 200%;
+
+       border: solid 1px red;
+	  background-color: #C957AD;
+
+	  position: absolute;
+	  top: 220px;
+	  left: 115px;
+	}
+
+	a.menu:hover {
+	  background-color: #8A2F73;
+	}
+      #logo {
+      	font-size: 24px;
+      	font-weight: bold;
+      }
+
+      /* Styles for score info */
+      div.info {
+      width: 320px;
+        border: solid 1px gray;
+        border-radius: 5px;
+   	   color: blue;
+      }
+      div.level {
+        display: inline-block;
+      }
+      div.level:before {
+      	content: "Level: ";
+      }
+      div.score {
+        margin-left: 20px;
+        display: inline-block;
+      }
+      div.score:eq(1) {
+        color: red;
+        font-variant: small-caps;
+        padding: 2px;
+        border-radius: 5px;
+        background-color: lightgray;
+        display: inline-block;
+      }
+      div.score:before {
+        content: "Score: ";
+      }
+      div.removed {
+          margin-left: 20px;
+      	display: inline-block;
+      }
+      div.removed:eq(1) {
+        color: red;
+        font-variant: small-caps;
+        padding: 2px;
+        border-radius: 5px;
+        background-color: lightgray;
+        display: inline-block;
+      }
+      div.removed:before {
+        content: "Removed: ";
+      }
+      div.goal {
+        display: inline-block;
+      }
+      div.goal:before {
+        content: " / ";
+      }
+      
+    	/* Styles for board pieces */ 
+      .piece {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        border: solid 1px black;
+        border-radius: 5px;
+      }
+      .blue {
+        background-color: blue;
+        background-image: url('circle-bgr.png');
+      }
+      .red {
+        background-color: red;
+        background-image: url('pastry-bgr.png'); 
+      }
+      .yellow {
+        background-color: yellow;
+        background-image: url('clover-bgr.png');
+
+      }
+      .green {
+        background-color: green;
+        background-image: url('pastry-bgr.png'); 
+      }
+      .pink {
+        background-color: violet;
+        background-image: url('clover-bgr.png');
+      }
+      .brown {
+        background-color: brown;
+        background-image: url('circle-bgr.png');
+        
+      }
+
+      .ash {
+        background-color: #d0d0d0;   
+        background-image: url('burst-bgr.png');
+      }
+
+      .orange {
+        background-color: orange;
+      }
+      
+      .selected {
+        border: solid 1px white !important;
+      }
+
+      /* special pieces */
+      .stripe {
+        background-image: url('stripe.png');
+      }
+      .dots {
+        background-image: url('dots.png');
+      }
+      .horiz {
+  	   background-image: url('horiz.png');
+      }
+      .vert {
+        background-image: url('vert.png');
+      }
+      
+	/* All animations */ 
+      @-webkit-keyframes pulsate {
+          0% { -webkit-transform: scale(1); }
+         50% { -webkit-transform: scale(0.9); }
+        100% { -webkit-transform: scale(1); }
+      }
+
+  	@-webkit-keyframes help {
+          0% { border: solid 1px wheat; -webkit-transform: scale(1); }
+         50% { border: solid 1px wheat; -webkit-transform: scale(0.9); }
+        100% { border: solid 1px wheat; -webkit-transform: scale(1); }
+      }
+      @-webkit-keyframes from-left {
+           0% { left: -34px; top: 0px; }
+          50% { left: -17px; top: -4px; }
+         100% { left: 0px;   top: 0px; }
+      }
+
+      @-webkit-keyframes from-right {
+           0% { left: 34px; top: 0px; }
+          50% { left: 17px; top: 4px; }
+         100% { left: 0px;  top: 0px;}
+      }
+
+      @-webkit-keyframes from-up {
+           0% { top: -34px; left: 0px; }
+          50% { top: -17px; left: 4px; }
+         100% { top: 0px;   left: 0px; }
+      }
+
+	@-webkit-keyframes from-down {
+           0% { top: 34px; left: 0px; }
+          50% { top: 17px; left: -4px; }
+         100% { top: 0px;  left: 0px; }
+      }
+
+      @-webkit-keyframes reject-move {
+         0% { left: 0px; }
+         20% { left: 5px; }
+         80% { left: -5px; }
+         100% { left: 0px; }
+      }
+
+      @-webkit-keyframes crunch {
+          0% { -webkit-transform: scale(1.0) rotate(0deg); }
+         25% { -webkit-transform: scale(0.8) rotate(60deg); }
+         50% { -webkit-transform: scale(0.6) rotate(120deg); }
+         75% { -webkit-transform: scale(0.4) rotate(180deg); }
+        100% { -webkit-transform: scale(0.1) rotate(170deg); }
+        
+      }
+      @-webkit-keyframes drop {
+           0% { top: -34px; }
+          50% { top: -17px; }
+         100% { top: 0px; }
+      }
+
+	/* Without prefix for non-webkit browsers */
+	@keyframes pulsate {
+          0% { transform: scale(1); }
+         50% { transform: scale(0.9); }
+        100% { transform: scale(1); }
+      }
+
+ 	@keyframes help {
+          0% { border: solid 1px wheat; transform: scale(1); }
+         50% { border: solid 1px wheat; transform: scale(0.9); }
+        100% { border: solid 1px wheat; transform: scale(1); }
+      }
+      @keyframes from-left {
+           0% { left: -32px; top: 0px; }
+          50% { left: -16px; top: -4px; }
+         100% { left: 0px;   top: 0px; }
+      }
+
+      @keyframes from-right {
+           0% { left: 32px; top: 0px; }
+          50% { left: 16px; top: 4px; }
+         100% { left: 0px;  top: 0px;}
+      }
+
+      @keyframes from-up {
+           0% { top: -32px; left: 0px; }
+          50% { top: -16px; left: 4px; }
+         100% { top: 0px;   left: 0px; }
+      }
+
+	@keyframes from-down {
+           0% { top: 32px; left: 0px; }
+          50% { top: 16px; left: -4px; }
+         100% { top: 0px;  left: 0px; }
+      }
+
+      @keyframes reject-move {
+         0% { left: 0px; }
+         20% { left: 5px; }
+         80% { left: -5px; }
+         100% { left: 0px; }
+      }
+
+      @keyframes crunch {
+          0% { transform: scale(1.0) rotate(0deg); }
+         25% { transform: scale(0.8) rotate(60deg); }
+         50% { transform: scale(0.6) rotate(120deg); }
+         75% { transform: scale(0.4) rotate(180deg); }
+        100% { transform: scale(0.1) rotate(170deg); }
+        
+      }
+      @keyframes drop {
+           0% { top: -34px; }
+          50% { top: -17px; }
+         100% { top: 0px; }
+      }
+

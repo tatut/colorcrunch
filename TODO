@@ -1,0 +1,8 @@
+- Implement special pieces:
+  - bomb (remove everything around the piece)
+  - lightning (remove whole row/column)
+  - colorbomb (remove every piece of the swapped color)
+
+- fix ALL the bugs!
+
+
