@@ -9,6 +9,3 @@ of the same type removes those pieces.
 
 Online version at http://webjure.org/colorcrunch/
 
-Screenshots:
-![Menu](tatut.github.com/colorcrunch/screenshots/menu.png)
-![Game](tatut.github.com/colorcrunch/screenshots/game.png)
