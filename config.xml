@@ -1,0 +1,14 @@
+<widget id="org.webjure.colorcrunch" version="0.0.1">
+    <name>Color Crunch</name>
+    <description>
+       Color Crunch Chronicles
+    </description>
+    <author href="http://webjure.org">
+        Tatu Tarvainen
+    </author>
+    <content src="colorcrunch.html" />
+    <access origin="*" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="WebViewBounce" value="false" />
+    <preference name="Orientation" value="portrait" />
+</widget>
