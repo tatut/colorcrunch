@@ -15,7 +15,7 @@
 	/* The container element the game renders itself onto */
      #colorcrunch {
       	width: 320px;
-      	height: 480px; 
+      	height: 480px;
 	     margin: 0; padding: 0;
      }
 
@@ -26,7 +26,7 @@
       body {
         margin: 0; padding: 0; background: #000;
       }
-      
+
 	/* Styles for the game main menu */
 	a.menu {
 	  display: inline-block;
@@ -102,8 +102,8 @@
       div.goal:before {
         content: " / ";
       }
-      
-    	/* Styles for board pieces */ 
+
+    	/* Styles for board pieces */
       .piece {
         display: inline-block;
         width: 32px;
@@ -118,7 +118,7 @@
       }
       .red {
         background-color: red;
-        background-image: url('pastry-bgr.png'); 
+        background-image: url('pastry-bgr.png');
       }
       .yellow {
         background-color: yellow;
@@ -127,7 +127,7 @@
       }
       .green {
         background-color: green;
-        background-image: url('pastry-bgr.png'); 
+        background-image: url('pastry-bgr.png');
       }
       .pink {
         background-color: violet;
@@ -136,18 +136,18 @@
       .brown {
         background-color: brown;
         background-image: url('circle-bgr.png');
-        
+
       }
 
       .ash {
-        background-color: #d0d0d0;   
+        background-color: #d0d0d0;
         background-image: url('burst-bgr.png');
       }
 
       .orange {
         background-color: orange;
       }
-      
+
       .selected {
         border: solid 1px white !important;
       }
@@ -165,8 +165,8 @@
       .vert {
         background-image: url('vert.png');
       }
-      
-	/* All animations */ 
+
+	/* All animations */
       @-webkit-keyframes pulsate {
           0% { -webkit-transform: scale(1); }
          50% { -webkit-transform: scale(0.9); }
@@ -179,34 +179,34 @@
         100% { border: solid 1px wheat; -webkit-transform: scale(1); }
       }
       @-webkit-keyframes from-left {
-           0% { left: -34px; top: 0px; }
-          50% { left: -17px; top: -4px; }
-         100% { left: 0px;   top: 0px; }
+  0% { -webkit-transform: translate3d(-34px, 0px, 0); }
+50% { -webkit-transform: translate3d(-17px, -4px, 0); }
+100% { -webkit-transform: translate3d(0px, 0px, 0); }
       }
 
       @-webkit-keyframes from-right {
-           0% { left: 34px; top: 0px; }
-          50% { left: 17px; top: 4px; }
-         100% { left: 0px;  top: 0px;}
+  0% { -webkit-transform: translate3d(34px, 0px, 0); }
+50% { -webkit-transform: translate3d(17px, 4px, 0); }
+100% { -webkit-transform: translate3d(0px, 0px, 0); }
       }
 
       @-webkit-keyframes from-up {
-           0% { top: -34px; left: 0px; }
-          50% { top: -17px; left: 4px; }
-         100% { top: 0px;   left: 0px; }
+        0% { -webkit-transform: translate3d(0px, -34px, 0); }
+       50% { -webkit-transform: translate3d(4px, -17px, 0); }
+      100% { -webkit-transform: translate3d(0px, 0px, 0); }
       }
 
 	@-webkit-keyframes from-down {
-           0% { top: 34px; left: 0px; }
-          50% { top: 17px; left: -4px; }
-         100% { top: 0px;  left: 0px; }
+      0% { -webkit-transform: translate3d(0px, 34px, 0); }
+    50% { -webkit-transform: translate3d(-4px, 17px, 0); }
+100% { -webkit-transform: translate3d(0px, 0px, 0); }
       }
 
       @-webkit-keyframes reject-move {
-         0% { left: 0px; }
-         20% { left: 5px; }
-         80% { left: -5px; }
-         100% { left: 0px; }
+  0% { -webkit-transform: translate3d(0px, 0px, 0); }
+20% { -webkit-transform: translate3d(5px, 0px, 0); }
+80% { -webkit-transform: translate3d(-5px, 0px, 0); }
+100% { -webkit-transform: translate3d(0px, 0px, 0); }
       }
 
       @-webkit-keyframes crunch {
@@ -215,12 +215,12 @@
          50% { -webkit-transform: scale(0.6) rotate(120deg); }
          75% { -webkit-transform: scale(0.4) rotate(180deg); }
         100% { -webkit-transform: scale(0.1) rotate(170deg); }
-        
+
       }
       @-webkit-keyframes drop {
-           0% { top: -34px; }
-          50% { top: -17px; }
-         100% { top: 0px; }
+           0% { -webkit-transform: translate3d(0px, -34px, 0); }
+          50% { -webkit-transform: translate3d(0px, -17px, 0); }
+         100% { -webkit-transform: translate3d(0px, 0px, 0); }
       }
 
 	/* Without prefix for non-webkit browsers */
@@ -236,34 +236,34 @@
         100% { border: solid 1px wheat; transform: scale(1); }
       }
       @keyframes from-left {
-           0% { left: -32px; top: 0px; }
-          50% { left: -16px; top: -4px; }
-         100% { left: 0px;   top: 0px; }
+           0% { transform: translate3d(-34px, 0px, 0); }
+          50% { transform: translate3d(-17px, -4px, 0); }
+         100% { transform: translate3d(0px, 0px, 0); }
       }
 
       @keyframes from-right {
-           0% { left: 32px; top: 0px; }
-          50% { left: 16px; top: 4px; }
-         100% { left: 0px;  top: 0px;}
+           0% { transform: translate3d(34px, 0px, 0); }
+          50% { transform: translate3d(17px, 4px, 0); }
+         100% { transform: translate3d(0px, 0px, 0); }
       }
 
       @keyframes from-up {
-           0% { top: -32px; left: 0px; }
-          50% { top: -16px; left: 4px; }
-         100% { top: 0px;   left: 0px; }
+           0% { transform: translate3d(0px, -34px, 0); }
+          50% { transform: translate3d(4px, -17px, 0); }
+         100% { transform: translate3d(0px, 0px, 0); }
       }
 
 	@keyframes from-down {
-           0% { top: 32px; left: 0px; }
-          50% { top: 16px; left: -4px; }
-         100% { top: 0px;  left: 0px; }
+           0% { transform: translate3d(0px, 34px, 0); }
+          50% { transform: translate3d(-4px, 17px, 0); }
+         100% { transform: translate3d(0px, 0px, 0); }
       }
 
       @keyframes reject-move {
-         0% { left: 0px; }
-         20% { left: 5px; }
-         80% { left: -5px; }
-         100% { left: 0px; }
+         0% { transform: translate3d(0px, 0px, 0); }
+         20% { transform: translate3d(5px, 0px, 0); }
+         80% { transform: translate3d(-5px, 0px, 0); }
+         100% { transform: translate3d(0px, 0px, 0); }
       }
 
       @keyframes crunch {
@@ -272,11 +272,11 @@
          50% { transform: scale(0.6) rotate(120deg); }
          75% { transform: scale(0.4) rotate(180deg); }
         100% { transform: scale(0.1) rotate(170deg); }
-        
+
       }
       @keyframes drop {
-           0% { top: -34px; }
-          50% { top: -17px; }
-         100% { top: 0px; }
+           0% { transform: translate3d(0px, -34px, 0); }
+          50% { transform: translate3d(0px, -17px, 0); }
+         100% { transform: translate3d(0px, 0px, 0); }
       }
 
